@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        myView = (TextView)findViewById(R.id.textView2);
+        myView = (TextView)findViewById(R.id.textview1);
     }
 
     public  void onClick(View v)
@@ -26,8 +26,8 @@ public class MainActivity extends AppCompatActivity
         mt.execute();
     }
 
-    class MyTask extends AsyncTask<Void, Void, Void>{
-
+    class MyTask extends AsyncTask<Void, Void, Void>
+    {
         @Override
         protected void onPreExecute()
         {
@@ -41,7 +41,8 @@ public class MainActivity extends AppCompatActivity
             try
             {
                 TimeUnit.SECONDS.sleep(2);
-            } catch (InterruptedException e)
+            }
+            catch (InterruptedException e)
             {
                 e.printStackTrace();
             }
